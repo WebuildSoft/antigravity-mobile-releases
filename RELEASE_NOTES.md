@@ -1,56 +1,49 @@
 # ==============================================================================
 # CAMPO 1: RELEASE TITLE (Copie e cole no campo "Release title" do GitHub)
 # ==============================================================================
-Antigravity Mobile v1.4.0 (Build #24) - Suporte Windows, Linux, macOS e Isolamento Multi-Usuário
+Antigravity Mobile & Server v1.4.0 (Build #25) - Suporte Universal de Workspace (Linux, macOS, Windows)
 
 # ==============================================================================
 # CAMPO 2: DESCRIBE THIS RELEASE (Copie e cole no campo "Describe this release")
 # ==============================================================================
-## 🚀 Novidades da Versão v1.4.0 (Build #24)
+## 🚀 Novidades da Versão v1.4.0 (Build #25)
 
-Esta atualização traz melhorias críticas de isolamento de sessão, correções na navegação de arquivos e expansão do suporte a servidores locais com executáveis dedicados de alta performance para **Windows**, **macOS** e **Linux**.
+Esta atualização traz a **resolução universal de workspace** para servidores locais e remotos, corrigindo em definitivo a navegação na tela de "Arquivos do Projeto" no aplicativo móvel em **Linux**, **macOS** e **Windows**.
 
 ---
 
-### 📱 Aplicativo Mobile (Android APK - Build #24)
-* **🔒 Isolamento Total de Sessão por Conta:** Configurações de servidor, limites e histórico agora são isolados por UID. Ao deslogar, todos os dados locais da conta anterior são completamente limpos da memória e do armazenamento local.
-* **📂 Correção no Explorer de Projetos:** Inclusão de tokens de autenticação Bearer em todas as requisições da árvore de diretórios e leitura de código, eliminando erros de autorização (HTTP 401/403).
-* **⚡ Estabilidade na Tela de Limites & Cotas:** Corrigido o carregamento infinito na visualização de consumo quando desconectado do servidor.
-* **📷 Pareamento Rápido via QR Code:** Conexão instantânea via câmera apontando para o servidor local ou online.
+### 📁 Correções e Melhorias no Servidor (Build #25)
+* **🌐 Resolução Canônica de Tilde (`~`) Multiplataforma:** Implementada a função nativa `ExpandHome`, que expande com segurança caminhos iniciados por `~`, `~/` e `~\` de forma agnóstica para qualquer sistema operacional.
+* **📂 Correção no Explorer de Projetos:** O servidor agora normaliza o caminho raiz ao receber requisições do aplicativo móvel, eliminando o erro `stat .../~: no such file or directory`.
+* **🛡️ Proteção Completa e Chroot/Jail:** Tratamento rigoroso contra Directory Traversal aplicado nas rotas HTTP `/api/workspace/tree`, `/api/workspace/file` e no canal WebSocket.
+* **⚡ Binários Nativos Otimizados:** Compilados em Go puro (sem CGO e sem dependência de Node.js) com executável Universal no macOS (suporte nativo a Apple Silicon M1/M2/M3 e processadores Intel).
 
 ---
 
 ### 🖥️ Servidores Locais Autônomos (Multi-Plataforma)
 
-Todos os pacotes de servidor incluem o **binário nativo compilado em Go (sem necessidade de Node.js)**, a interface web do app e scripts inteligentes de inicialização:
+Todos os pacotes de servidor incluem o **binário nativo compilado em Go**, a interface web do app e scripts inteligentes de inicialização:
 
 | Plataforma | Pacote ZIP Versionado | Tamanho | Como Iniciar |
 |---|---|:---:|---|
-| 🪟 **Windows** | `antigravity-server-windows-v1.4.0-build24.zip` | **12 MB** | 2 cliques em `start-windows.bat` |
-| 🍎 **macOS** | `antigravity-server-macos-v1.4.0-build24.zip` | **12 MB** | Executar `./start.sh` no terminal |
-| 🐧 **Linux** | `antigravity-server-linux-v1.4.0-build24.zip` | **12 MB** | Executar `./start.sh` no terminal |
+| 🪟 **Windows** | `antigravity-server-windows-v1.4.0-build25.zip` | **13 MB** | 2 cliques em `start-windows.bat` |
+| 🍎 **macOS** | `antigravity-server-macos-v1.4.0-build25.zip` | **17 MB** | Executar `./start.sh` no terminal |
+| 🐧 **Linux** | `antigravity-server-linux-v1.4.0-build25.zip` | **12 MB** | Executar `./start.sh` no terminal |
+| 📱 **Android** | `AntigravityMobile-v1.4.0-build24.apk` | **70 MB** | Instalar no smartphone |
 
-> **Nota:** Os links fixos (`antigravity-server-windows.zip`, etc.) continuam funcionando normalmente para quem utiliza downloads automatizados ou redirecionamentos.
-
----
-
-### 🪟 Destaques Especiais da Versão Windows
-* **🛡️ Permissão de Administrador Automática (UAC):** Ao iniciar o `start-windows.bat`, ele solicita autorização visual na tela do Windows ("Deseja permitir?"), garantindo que o terminal nunca mais feche sozinho.
-* **🔥 Liberação Automática no Firewall:** Adiciona a regra para a porta `4040` (`profile=any`) silenciosamente, permitindo que seu celular no Wi-Fi conecte sem bloqueios.
-* **🧹 Limpeza de Conflitos (Porta & Túnel):** Detecta se outro processo ou instância do Cloudflare ficou presa em segundo plano e libera a conexão automaticamente.
-* **💿 Suporte a Instalador Inno Setup:** Script `installer/antigravity_setup.iss` pronto para quem desejar compilar o instalador `Setup.exe`.
+> **Nota:** Os links fixos (`antigravity-server-windows.zip`, `antigravity-server-macos.zip`, `antigravity-server-linux.zip`) foram atualizados para a Build #25.
 
 ---
 
 ### ⚡ Como Iniciar / Instalar:
 
 #### No Windows:
-1. Baixe e extraia `antigravity-server-windows-v1.4.0-build24.zip`.
+1. Baixe e extraia `antigravity-server-windows-v1.4.0-build25.zip`.
 2. Dê dois cliques em **`start-windows.bat`** (ou `start-online-windows.bat` para acesso remoto Cloudflare).
-3. Clique em **SIM** na permissão do Windows e abra o link exibido no navegador do celular.
+3. Abra a tela de arquivos do projeto no celular: ela carregará imediatamente sem erros de caminho.
 
 #### No Linux e macOS:
 ```bash
-unzip antigravity-server-macos-v1.4.0-build24.zip
+unzip antigravity-server-macos-v1.4.0-build25.zip
 ./start.sh
 ```
