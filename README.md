@@ -4,16 +4,18 @@ Repositório público oficial para distribuição dos instaladores do **Antigrav
 
 ---
 
-### 📥 Download do Aplicativo
+### 📥 Download dos Pacotes (v1.4.0 - Build #24)
 
-Você pode baixar a versão mais recente diretamente na aba de **[Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)**:
+Você pode baixar os arquivos diretamente na aba de **[Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)**:
 
-| Arquivo | Versão | Tamanho | Plataforma |
+| Arquivo com Versão | Tamanho | Plataforma | Como Iniciar |
 |---|---|---|---|
-| **`AntigravityMobile-v1.4.0-build24.apk`** | v1.4.0 (Build #24) | ~70 MB | Android 8.0+ |
-| **`antigravity-server-windows.zip`** | v1.4.0 | ~17 MB | Windows 10 / 11 (x64) |
-| **`antigravity-server-linux.zip`** | v1.4.0 | ~20 MB | Linux (x64 / ARM64) |
-| **`antigravity-server-macos.zip`** | v1.4.0 | ~13 MB | macOS (Intel / Apple Silicon) |
+| **`AntigravityMobile-v1.4.0-build24.apk`** | **~70 MB** | Android 8.0+ | Baixar e instalar no celular |
+| **`antigravity-server-windows-v1.4.0-build24.zip`** | **12 MB** | 🪟 Windows (x64) | Dois cliques em `start-windows.bat` |
+| **`antigravity-server-macos-v1.4.0-build24.zip`** | **12 MB** | 🍎 macOS (Universal) | Executar `./start.sh` no terminal |
+| **`antigravity-server-linux-v1.4.0-build24.zip`** | **12 MB** | 🐧 Linux (x64 / ARM64) | Executar `./start.sh` no terminal |
+
+*(Obs: Os arquivos `antigravity-server-windows.zip`, `antigravity-server-macos.zip` e `antigravity-server-linux.zip` continuam disponíveis como links fixos de redirecionamento).*
 
 ---
 
