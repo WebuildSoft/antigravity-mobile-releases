@@ -1,31 +1,30 @@
 # ==============================================================================
 # CAMPO 1: RELEASE TITLE (Copie e cole no campo "Release title" do GitHub)
 # ==============================================================================
-Antigravity Mobile & Server v1.4.0 (Build #25) - Rolagem Inteligente no Chat e Suporte Universal de Workspace
+Antigravity Mobile & Server v1.4.0 (Build #26) - Correção de Mensagens Duplicadas e Atualização Direta via GitHub
 
 # ==============================================================================
 # CAMPO 2: DESCRIBE THIS RELEASE (Copie e cole no campo "Describe this release")
 # ==============================================================================
-## 🚀 Novidades da Versão v1.4.0 (Build #25)
+## 🚀 Novidades da Versão v1.4.0 (Build #26)
 
-Esta atualização traz melhorias críticas de usabilidade no **Chat do Aplicativo Mobile** e a **resolução universal de workspace** para servidores locais e remotos no **Linux**, **macOS** e **Windows**.
-
----
-
-### 📱 Aplicativo Mobile (Android APK - Build #25)
-* **📜 Rolagem Inteligente (Smart Auto-Scroll):** A tela não puxa mais para baixo à força quando você rola para cima para ler mensagens anteriores enquanto a IA digita.
-* **⬇️ Botão Flutuante de Retorno:** Quando você rola para ler o histórico, um botão flutuante surge suavemente para levá-lo de volta à mensagem mais recente com um único toque.
-* **🚀 Rolagem Automática ao Enviar:** Toda vez que você envia uma mensagem, o chat desce suavemente até o final da conversa.
-* **✨ Redução de Flicker / Piscar:** Otimização na renderização das mensagens durante o streaming em tempo real, eliminando oscilações visuais na tela.
-* **🔐 Gerenciamento de Contas:** Carregamento fluido das contas Google conectadas sem travar a interface.
+Esta atualização traz correções essenciais de persistência e estabilidade no **Chat do Aplicativo Mobile**, desduplicação idempotente de histórico e o novo sistema de **atualização direta 100% via GitHub Releases**.
 
 ---
 
-### 📁 Servidor & Workspace (Build #25)
-* **🌐 Resolução Canônica de Tilde (`~`) Multiplataforma:** Função nativa `ExpandHome` que expande com segurança caminhos iniciados por `~`, `~/` e `~\` de forma agnóstica para qualquer sistema operacional.
-* **📂 Correção no Explorer de Projetos:** O servidor agora normaliza o caminho raiz ao receber requisições do aplicativo móvel, eliminando o erro `stat .../~: no such file or directory`.
-* **🛡️ Proteção Completa e Chroot/Jail:** Tratamento rigoroso contra Directory Traversal aplicado nas rotas HTTP `/api/workspace/tree`, `/api/workspace/file` e no canal WebSocket.
-* **⚡ Binários Nativos Otimizados:** Compilados em Go puro (sem CGO e sem dependência de Node.js) com executável Universal no macOS (Apple Silicon + Intel).
+### 📱 Aplicativo Mobile (Android APK - Build #26)
+* **🚫 Eliminação de Mensagens Duplicadas:** Correção na raiz do problema que exibia a mesma mensagem enviada duas vezes na tela.
+* **🛡️ Trava Anti-Duplo Envio (Debounce Guard):** Prevenção automática contra duplo clique acidental no botão de envio.
+* **🌐 Atualização Direta pelo GitHub Releases:** Verificação e download de novas versões diretamente pelo GitHub (`antigravity-mobile-releases`) com fallback automático para o servidor local se estiver offline.
+* **📜 Rolagem Inteligente & Sem Flicker:** Manutenção da posição de leitura enquanto o agente transmite pensamentos e ferramentas em tempo real.
+
+---
+
+### 📁 Servidor Companheiro (Build #26)
+* **🔄 Sincronização Idempotente (`ImportSingleConversationTranscript`):** Evita que a releitura do arquivo de log do Antigravity CLI recrie mensagens com IDs duplicados no SQLite.
+* **🧹 Limpeza Automática do Banco de Dados:** Rotina de inicialização que detecta e remove mensagens redundantes mantendo a integridade de todas as `tool_calls`.
+* **⚡ Filtro de Entrega em Memória:** Garantia absoluta de que nenhuma mensagem duplicada é enviada aos clientes conectados.
+* **🌐 Servidor Web Integrado:** Painel web atualizado com as correções mais recentes compiladas.
 
 ---
 
@@ -33,12 +32,12 @@ Esta atualização traz melhorias críticas de usabilidade no **Chat do Aplicati
 
 | Plataforma | Pacote Versionado | Tamanho | Como Iniciar |
 |---|---|:---:|---|
-| 📱 **Android** | `AntigravityMobile-v1.4.0-build25.apk` | **73 MB** | Baixar e instalar no celular |
-| 🪟 **Windows** | `antigravity-server-windows-v1.4.0-build25.zip` | **13 MB** | 2 cliques em `start.bat` ou `.\start.ps1` |
-| 🍎 **macOS** | `antigravity-server-macos-v1.4.0-build25.zip` | **17 MB** | Executar `./start.sh` no terminal |
-| 🐧 **Linux** | `antigravity-server-linux-v1.4.0-build25.zip` | **12 MB** | Executar `./start.sh` no terminal |
+| 📱 **Android** | `AntigravityMobile-v1.4.0-build26.apk` | **70 MB** | Baixar e instalar no celular |
+| 🪟 **Windows** | `antigravity-server-windows-v1.4.0-build26.zip` | **13 MB** | 2 cliques em `start.bat` ou `.\start.ps1` |
+| 🍎 **macOS** | `antigravity-server-macos-v1.4.0-build26.zip` | **17 MB** | Executar `./start.sh` no terminal |
+| 🐧 **Linux** | `antigravity-server-linux-v1.4.0-build26.zip` | **12 MB** | Executar `./start.sh` no terminal |
 
-> **Nota:** Os links fixos (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam sempre para estes arquivos da Build #25.
+> **Nota:** Os links fixos (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam sempre para estes arquivos da Build #26.
 
 ---
 

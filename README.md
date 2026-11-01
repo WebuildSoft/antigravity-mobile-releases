@@ -4,16 +4,16 @@ Repositório público oficial para distribuição dos instaladores do **Antigrav
 
 ---
 
-### 📥 Download dos Pacotes (v1.4.0 - Build #25)
+### 📥 Download dos Pacotes (v1.4.0 - Build #26)
 
 Você pode baixar os arquivos diretamente na aba de **[Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)**:
 
 | Arquivo com Versão | Tamanho | Plataforma | Como Iniciar |
 |---|---|---|---|
-| **`AntigravityMobile-v1.4.0-build25.apk`** | **73 MB** | 📱 Android 8.0+ | Baixar e instalar no celular |
-| **`antigravity-server-windows-v1.4.0-build25.zip`** | **13 MB** | 🪟 Windows (x64) | 2 cliques em `start.bat` ou `.\start.ps1` |
-| **`antigravity-server-macos-v1.4.0-build25.zip`** | **17 MB** | 🍎 macOS (Universal) | Executar `./start.sh` no terminal |
-| **`antigravity-server-linux-v1.4.0-build25.zip`** | **12 MB** | 🐧 Linux (x64 / ARM64) | Executar `./start.sh` no terminal |
+| **`AntigravityMobile-v1.4.0-build26.apk`** | **70 MB** | 📱 Android 8.0+ | Baixar e instalar no celular |
+| **`antigravity-server-windows-v1.4.0-build26.zip`** | **13 MB** | 🪟 Windows (x64) | 2 cliques em `start.bat` ou `.\start.ps1` |
+| **`antigravity-server-macos-v1.4.0-build26.zip`** | **17 MB** | 🍎 macOS (Universal) | Executar `./start.sh` no terminal |
+| **`antigravity-server-linux-v1.4.0-build26.zip`** | **12 MB** | 🐧 Linux (x64 / ARM64) | Executar `./start.sh` no terminal |
 
 *(Obs: Os arquivos `app-release.apk`, `antigravity-server-windows.zip`, `antigravity-server-macos.zip` e `antigravity-server-linux.zip` continuam disponíveis como links fixos de redirecionamento para a versão mais recente).*
 
@@ -31,7 +31,7 @@ O Antigravity Mobile é composto pelo **aplicativo Android** e pelo **servidor c
 ## 🚀 Passo a Passo de Instalação
 
 ### 1️⃣ No Celular (Android):
-1. Baixe o arquivo **`AntigravityMobile-v1.4.0-build25.apk`** (ou `app-release.apk`).
+1. Baixe o arquivo **`AntigravityMobile-v1.4.0-build26.apk`** (ou `app-release.apk`).
 2. Se o navegador exibir o aviso de segurança do Android, escolha **"Fazer download mesmo assim"**.
 3. Abra o arquivo baixado e clique em **Instalar** (ative *"Permitir desta fonte"* se solicitado).
 4. Abra o aplicativo:
