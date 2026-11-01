@@ -8,9 +8,12 @@ Repositório público oficial para distribuição dos instaladores do **Antigrav
 
 Você pode baixar a versão mais recente diretamente na aba de **[Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)**:
 
-| Arquivo | Versão | Tamanho | Requisitos |
+| Arquivo | Versão | Tamanho | Plataforma |
 |---|---|---|---|
-| **`AntigravityMobile-v1.4.0-build23.apk`** | v1.4.0 (Build #23) | ~70 MB | Android 8.0+ |
+| **`AntigravityMobile-v1.4.0-build24.apk`** | v1.4.0 (Build #24) | ~70 MB | Android 8.0+ |
+| **`antigravity-server-windows.zip`** | v1.4.0 | ~17 MB | Windows 10 / 11 (x64) |
+| **`antigravity-server-linux.zip`** | v1.4.0 | ~20 MB | Linux (x64 / ARM64) |
+| **`antigravity-server-macos.zip`** | v1.4.0 | ~13 MB | macOS (Intel / Apple Silicon) |
 
 ---
 
