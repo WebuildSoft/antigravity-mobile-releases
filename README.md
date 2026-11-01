@@ -1,114 +1,145 @@
-# Antigravity Mobile • Downloads & Releases
+<div align="center">
 
-Repositório público oficial para distribuição dos instaladores do **Antigravity Mobile Companion** para Android e servidores locais.
+<img src="https://raw.githubusercontent.com/WebuildSoft/antigravity-mobile-site/main/icons/Icon-192.png" width="88" height="88" alt="Antigravity Mobile Logo" />
 
----
+# Antigravity Mobile & Server
 
-### 📥 Download dos Pacotes (v1.4.0 - Build #26)
+Companion mobile client e servidor local de alta performance para o Google Antigravity.
 
-Você pode baixar os arquivos diretamente na aba de **[Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)**:
+[![Latest Release](https://img.shields.io/github/v/release/WebuildSoft/antigravity-mobile-releases?color=0284c7&style=flat-square)](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-334155?style=flat-square)](#download-dos-pacotes-v140--build-25)
+[![Go Server](https://img.shields.io/badge/server-Go%201.24-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/WebuildSoft/antigravity-server)
+[![Flutter](https://img.shields.io/badge/client-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)](https://github.com/WebuildSoft/Antigravity-mobile)
+[![License](https://img.shields.io/badge/license-MIT-emerald?style=flat-square)](LICENSE)
 
-| Arquivo com Versão | Tamanho | Plataforma | Como Iniciar |
-|---|---|---|---|
-| **`AntigravityMobile-v1.4.0-build26.apk`** | **70 MB** | 📱 Android 8.0+ | Baixar e instalar no celular |
-| **`antigravity-server-windows-v1.4.0-build26.zip`** | **13 MB** | 🪟 Windows (x64) | 2 cliques em `start.bat` ou `.\start.ps1` |
-| **`antigravity-server-macos-v1.4.0-build26.zip`** | **17 MB** | 🍎 macOS (Universal) | Executar `./start.sh` no terminal |
-| **`antigravity-server-linux-v1.4.0-build26.zip`** | **12 MB** | 🐧 Linux (x64 / ARM64) | Executar `./start.sh` no terminal |
-
-*(Obs: Os arquivos `app-release.apk`, `antigravity-server-windows.zip`, `antigravity-server-macos.zip` e `antigravity-server-linux.zip` continuam disponíveis como links fixos de redirecionamento para a versão mais recente).*
+</div>
 
 ---
 
-# 📖 Manual de Instalação, Configuração e Uso
+## Download dos Pacotes (v1.4.0 • Build #25)
 
-### 🏗️ Como Funciona
-O Antigravity Mobile é composto pelo **aplicativo Android** e pelo **servidor companion Go** no seu computador. O servidor faz a ponte direta com o seu **Antigravity CLI oficial (`agy`)** instalado na sua máquina.
+Os binários compilados estão disponíveis diretamente na aba de [Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest):
 
-> ⚠️ **Conta Google / Antigravity:** O servidor usa as credenciais e cotas da sua conta Google já conectada no seu computador para responder aos comandos de IA.
+| Plataforma | Pacote Versionado | Tamanho | Inicialização |
+| :--- | :--- | :---: | :--- |
+| **Android** | [`AntigravityMobile-v1.4.0-build25.apk`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/app-release.apk) | 73 MB | Instalar no dispositivo |
+| **Windows** | [`antigravity-server-windows-v1.4.0-build25.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-windows.zip) | 13 MB | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | [`antigravity-server-macos-v1.4.0-build25.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-macos.zip) | 17 MB | Executar `./start.sh` |
+| **Linux** | [`antigravity-server-linux-v1.4.0-build25.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-linux.zip) | 12 MB | Executar `./start.sh` |
 
----
-
-## 🚀 Passo a Passo de Instalação
-
-### 1️⃣ No Celular (Android):
-1. Baixe o arquivo **`AntigravityMobile-v1.4.0-build26.apk`** (ou `app-release.apk`).
-2. Se o navegador exibir o aviso de segurança do Android, escolha **"Fazer download mesmo assim"**.
-3. Abra o arquivo baixado e clique em **Instalar** (ative *"Permitir desta fonte"* se solicitado).
-4. Abra o aplicativo:
-   - **Já tem cadastro:** Faça login com seu e-mail e senha.
-   - **Novo usuário:** Toque em **"Criar Conta"** para registrar seu acesso seguro.
+> [!NOTE]
+> Os links fixos (`app-release.apk`, `antigravity-server-windows.zip`, etc.) redirecionam sempre para a compilação estável do release atual.
 
 ---
 
-### 2️⃣ No Computador (Iniciando o Servidor):
+## Arquitetura do Sistema
 
-* 🪟 **No Windows:**
-  Recomendamos abrir o **PowerShell** e rodar o instalador automático:
-  ```powershell
-  irm https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.ps1 | iex
-  ```
-  *(Ou extraia o `.zip`, abra o PowerShell na pasta e execute `.\start.ps1` ou clique em `start.bat`)*
+O ecossistema divide-se em dois módulos complementares:
 
-* 🍎 **No Mac ou 🐧 Linux:**
-  Abra o **Terminal** e execute:
-  ```bash
-  curl -sSL https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.sh | bash
-  ```
+1. **Cliente Mobile (Android):** Interface nativa em Flutter focada em visualização do raciocínio em tempo real, navegação no explorador de arquivos e envio de prompts.
+2. **Servidor Companion (Desktop):** Binário em Go de baixo consumo de recursos que atua como ponte com o Antigravity CLI oficial (`agy`) e gerencia os canais WebSocket com criptografia TLS.
+
+> [!IMPORTANT]
+> O servidor utiliza a autenticação local do Antigravity CLI já presente na sua máquina de desenvolvimento. As requisições de IA consomem as cotas e permissões da sua conta Google associada.
 
 ---
 
-### 3️⃣ Conectar e Usar:
-1. O terminal do seu computador desenhará um **QR Code**.
-2. No app do celular, toque em **Conectar Servidor** e aponte a câmera para o QR Code no terminal.
-3. Pronto! O workspace e o chat do Antigravity serão carregados no seu celular.
+## Guia de Instalação e Execução
+
+### 1. Dispositivo Móvel (Android)
+1. Baixe o instalador `AntigravityMobile-v1.4.0-build25.apk` (ou `app-release.apk`).
+2. Se o navegador exibir o aviso de instalação de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize o navegador nas opções de segurança do sistema.
+3. Abra o aplicativo instalado:
+   - Caso já possua conta: faça login com seu e-mail e senha.
+   - Caso seja seu primeiro uso: selecione **"Criar Conta"** para cadastrar seu perfil de acesso.
+
+### 2. Servidor Companion (Computador)
+
+#### Windows
+Execute o script de automação via PowerShell:
+```powershell
+irm https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.ps1 | iex
+```
+*Alternativa manual via arquivo ZIP:*
+1. Extraia o pacote `antigravity-server-windows-v1.4.0-build25.zip`.
+2. Abra a pasta no PowerShell e inicie o servidor:
+   ```powershell
+   .\start.ps1
+   ```
+   *(ou execute o utilitário `start.bat`)*.
+
+#### macOS e Linux
+Execute o script oficial via Terminal:
+```bash
+curl -sSL https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.sh | bash
+```
+*Alternativa manual via arquivo ZIP:*
+1. Extraia o pacote correspondente ao seu sistema operacional.
+2. No diretório extraído, atribua permissões de execução e inicie o serviço:
+   ```bash
+   chmod +x start.sh bin/*
+   ./start.sh
+   ```
+
+### 3. Pareamento
+1. Após a inicialização, o terminal exibirá as rotas locais, a URL de túnel e um código QR em ASCII.
+2. No aplicativo móvel, toque em **"Conectar Servidor"** e aponte a câmera para o código no terminal.
+3. A conexão será estabelecida automaticamente via WebSocket autenticado.
 
 ---
 
-## 🛠️ Resolução de Dúvidas e Problemas Comuns
+## Diagnóstico e Solução de Problemas
 
-### 🛡️ 1. O Windows Defender ou Antivírus bloqueou o `start.bat` ou o executável?
-* **Motivo:** O servidor é um projeto open source recente e não possui assinatura de certificado comercial pago da Microsoft. Além disso, o arquivo `.bat` usa `-ExecutionPolicy Bypass`, o que aciona o alerta de antivírus.
-* **Se aparecer a tela azul do SmartScreen:** Clique em **"Mais informações"** e depois em **"Executar assim mesmo"**.
-* **Se o antivírus apagou ou bloqueou o arquivo:** Acesse *Segurança do Windows > Proteção contra vírus e ameaças > Histórico de proteção*, localize o bloqueio e clique em *Ações > Restaurar*.
-* **Melhor alternativa para Windows:** Execute o script nativo direto no PowerShell:
+### 1. Alerta de Segurança no Windows (SmartScreen ou Antivírus)
+* **Causa:** O binário é uma compilação de código aberto recente e não inclui assinatura digital comercial corporativa da Microsoft. O utilitário `.bat` também utiliza parâmetros de bypass de política de execução, o que ativa heurísticas preventivas.
+* **SmartScreen ("O Windows protegeu o seu computador"):**
+  1. Clique em **"Mais informações"**.
+  2. Selecione **"Executar assim mesmo"**.
+* **Arquivo retido pelo antivírus:**
+  Acesse *Segurança do Windows > Proteção contra vírus e ameaças > Histórico de proteção* e selecione *Ações > Permitir no dispositivo / Restaurar*.
+* **Recomendação técnica:**
+  Execute diretamente o script PowerShell no terminal da pasta para evitar gatilhos do interpretador de comandos em lote:
   ```powershell
   .\start.ps1
   ```
 
----
+### 2. Autenticação com a Conta Google no Antigravity CLI (`agy`)
+> [!WARNING]
+> O comando `agy auth login` **não existe** no CLI e resultará em erro de sintaxe (`unexpected argument "auth"`).
 
-### 🔑 2. Como conectar a conta Google no Antigravity CLI (`agy`)?
-> 🛑 **Atenção:** O comando `agy auth login` **não existe** e retornará erro.
-
-* Para conectar ou autorizar sua conta Google, digite no terminal do seu computador:
+* Para autenticar sua conta, execute no terminal da sua máquina:
   ```bash
   agy
   ```
-  O Antigravity abrirá e fornecerá a janela/link oficial do Google para autorizar seu acesso no navegador.
-* **Como testar se está tudo certo:**
-  Digite no terminal:
+  O utilitário abrirá uma sessão interativa e exibirá o link de autorização OAuth do Google no navegador.
+* Para verificar o status da autenticação e validar os modelos disponíveis:
   ```bash
   agy models
   ```
-  Se a lista de modelos de IA for exibida, sua máquina está 100% pronta.
+  A listagem de modelos confirma que o ambiente local está apto a receber instruções do aplicativo móvel.
+
+### 3. Bloqueio de Conexão Local por Firewall (Porta 4040)
+Caso o dispositivo móvel não consiga se comunicar com o computador através da rede Wi-Fi local:
+* **Windows (PowerShell com privilégios de Administrador):**
+  ```powershell
+  New-NetFirewallRule -DisplayName "Antigravity Server (Porta 4040)" -Direction Inbound -LocalPort 4040 -Protocol TCP -Action Allow
+  ```
+* **Linux (com firewall UFW ativo):**
+  ```bash
+  sudo ufw allow 4040/tcp
+  ```
+* **macOS:**
+  Acesse *Ajustes do Sistema > Rede > Firewall* e garanta que o processo `antigravity-server` está habilitado para conexões de entrada.
+
+### 4. Redes com Isolamento de Cliente (AP Isolation) e Conexões Remotas
+Em redes corporativas, acadêmicas ou públicas, o roteador pode impedir a comunicação ponto a ponto entre dispositivos na mesma rede local.
+* O servidor inicializa automaticamente um Quick Tunnel criptografado via Cloudflare com terminação `.trycloudflare.com`.
+* Utilize o código QR correspondente à URL pública para rotear o tráfego de forma transparente mesmo em redes móveis (4G/5G) ou redes com isolamento ativo.
 
 ---
 
-### 🧱 3. O celular não conecta no Wi-Fi? (Liberar o Firewall na Porta 4040)
-Se o firewall do Windows bloqueou a porta local `4040`, abra o **PowerShell como Administrador** e execute:
-```powershell
-New-NetFirewallRule -DisplayName "Antigravity Server (Porta 4040)" -Direction Inbound -LocalPort 4040 -Protocol TCP -Action Allow
-```
-*(No Linux com UFW ativo: `sudo ufw allow 4040/tcp`)*.
+<div align="center">
 
----
+Desenvolvido por WebuildSoft • Licença MIT • 2026
 
-### 🌐 4. Usando fora de casa ou em Wi-Fi de Faculdade/Empresa (Túnel Cloudflare)
-Se você estiver no 4G/5G ou em redes com **Isolamento de AP** (onde o roteador impede dispositivos de se comunicarem diretamente):
-- O servidor gera automaticamente uma URL de túnel seguro com final `.trycloudflare.com`.
-- Basta escanear o QR Code de túnel no celular para se conectar de qualquer lugar do mundo.
-
----
-
-### 🛡️ Segurança e Integridade
-Todos os pacotes deste repositório são compilados em ambiente limpo, higienizado e isolado de rede local, garantindo zero vazamento de dados privados.
+</div>
