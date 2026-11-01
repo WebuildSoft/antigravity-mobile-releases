@@ -10,7 +10,7 @@ Você pode baixar a versão mais recente diretamente na aba de **[Releases](http
 
 | Arquivo | Versão | Tamanho | Requisitos |
 |---|---|---|---|
-| **`AntigravityMobile-v1.4.0.apk`** | v1.4.0 (Build #23) | ~70 MB | Android 8.0+ |
+| **`AntigravityMobile-v1.4.0-build23.apk`** | v1.4.0 (Build #23) | ~70 MB | Android 8.0+ |
 
 ---
 
