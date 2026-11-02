@@ -7,7 +7,7 @@
 Companion mobile client e servidor local de alta performance para o Google Antigravity.
 
 [![Latest Release](https://img.shields.io/github/v/release/WebuildSoft/antigravity-mobile-releases?color=0284c7&style=flat-square)](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)
-[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-334155?style=flat-square)](#download-dos-pacotes-v140--build-26)
+[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-334155?style=flat-square)](#download-dos-pacotes-v140--build-40)
 [![Go Server](https://img.shields.io/badge/server-Go%201.24-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/WebuildSoft/antigravity-server)
 [![Flutter](https://img.shields.io/badge/client-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)](https://github.com/WebuildSoft/antigravity-mobile-releases)
 [![Developer](https://img.shields.io/badge/developer-WebuildSoft-0284c7?style=flat-square)](https://github.com/WebuildSoft)
@@ -16,16 +16,16 @@ Companion mobile client e servidor local de alta performance para o Google Antig
 
 ---
 
-## Download dos Pacotes (v1.4.0 • Build #26)
+## Download dos Pacotes (v1.4.0 • Build #40)
 
 Os binários compilados estão disponíveis diretamente na aba de [Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest):
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | [`AntigravityMobile-v1.4.0-build26.apk`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/app-release.apk) | 70 MB | Instalar no dispositivo |
-| **Windows** | [`antigravity-server-windows-v1.4.0-build26.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-windows.zip) | 13 MB | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | [`antigravity-server-macos-v1.4.0-build26.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-macos.zip) | 17 MB | Executar `./start.sh` |
-| **Linux** | [`antigravity-server-linux-v1.4.0-build26.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-linux.zip) | 12 MB | Executar `./start.sh` |
+| **Android** | [`AntigravityMobile-v1.4.0-build40.apk`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/app-release.apk) | 77 MB | Instalar no dispositivo |
+| **Windows** | [`antigravity-server-windows-v1.4.0-build40.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-windows.zip) | 13 MB | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | [`antigravity-server-macos-v1.4.0-build40.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-macos.zip) | 17 MB | Executar `./start.sh` |
+| **Linux** | [`antigravity-server-linux-v1.4.0-build40.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-linux.zip) | 12 MB | Executar `./start.sh` |
 
 > [!NOTE]
 > Os links fixos (`app-release.apk`, `antigravity-server-windows.zip`, etc.) redirecionam sempre para a compilação estável do release atual.
@@ -36,8 +36,8 @@ Os binários compilados estão disponíveis diretamente na aba de [Releases](htt
 
 O ecossistema divide-se em dois módulos complementares:
 
-1. **Cliente Mobile (Android):** Interface nativa em Flutter focada em visualização do raciocínio em tempo real, navegação no explorador de arquivos e envio de prompts.
-2. **Servidor Companion (Desktop):** Binário em Go de baixo consumo de recursos que atua como ponte com o Antigravity CLI oficial (`agy`) e gerencia os canais WebSocket com criptografia TLS.
+1. **Cliente Mobile (Android):** Interface nativa em Flutter com suporte a multi-contas Google, reconhecimento de voz contínuo, visualizador de diffs e acompanhamento em tempo real do raciocínio da IA.
+2. **Servidor Companion (Desktop):** Binário em Go de baixíssima latência que conecta diretamente ao Antigravity CLI oficial (`agy`), sincroniza conversas SQLite locais e gera túneis seguros Zero Trust.
 
 > [!IMPORTANT]
 > O servidor utiliza a autenticação local do Antigravity CLI já presente na sua máquina de desenvolvimento. As requisições de IA consomem as cotas e permissões da sua conta Google associada.
@@ -47,11 +47,9 @@ O ecossistema divide-se em dois módulos complementares:
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador `AntigravityMobile-v1.4.0-build26.apk` (ou `app-release.apk`).
+1. Baixe o instalador `AntigravityMobile-v1.4.0-build40.apk` (ou `app-release.apk`).
 2. Se o navegador exibir o aviso de instalação de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize o navegador nas opções de segurança do sistema.
-3. Abra o aplicativo instalado:
-   - Caso já possua conta: faça login com seu e-mail e senha.
-   - Caso seja seu primeiro uso: selecione **"Criar Conta"** para cadastrar seu perfil de acesso.
+3. Abra o aplicativo instalado e aponte a câmera para o QR Code gerado pelo servidor companion.
 
 ### 2. Servidor Companion (Computador)
 
@@ -61,7 +59,7 @@ Execute o script de automação via PowerShell:
 irm https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.ps1 | iex
 ```
 *Alternativa manual via arquivo ZIP:*
-1. Extraia o pacote `antigravity-server-windows-v1.4.0-build26.zip`.
+1. Extraia o pacote `antigravity-server-windows-v1.4.0-build40.zip`.
 2. Abra a pasta no PowerShell e inicie o servidor:
    ```powershell
    .\start.ps1
@@ -74,72 +72,31 @@ Execute o script oficial via Terminal:
 curl -sSL https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.sh | bash
 ```
 *Alternativa manual via arquivo ZIP:*
-1. Extraia o pacote correspondente ao seu sistema operacional.
-2. No diretório extraído, atribua permissões de execução e inicie o serviço:
+1. Extraia o pacote `antigravity-server-macos-v1.4.0-build40.zip` (ou `linux`).
+2. Abra a pasta no Terminal e inicie o servidor:
    ```bash
-   chmod +x start.sh bin/*
    ./start.sh
    ```
 
-### 3. Pareamento
-1. Após a inicialização, o terminal exibirá as rotas locais, a URL de túnel e um código QR em ASCII.
-2. No aplicativo móvel, toque em **"Conectar Servidor"** e aponte a câmera para o código no terminal.
-3. A conexão será estabelecida automaticamente via WebSocket autenticado.
-
 ---
 
-## Diagnóstico e Solução de Problemas
+## Estrutura dos Arquivos de Configuração
 
-### 1. Alerta de Segurança no Windows (SmartScreen ou Antivírus)
-* **Causa:** O binário é uma compilação de código aberto recente e não inclui assinatura digital comercial corporativa da Microsoft. O utilitário `.bat` também utiliza parâmetros de bypass de política de execução, o que ativa heurísticas preventivas.
-* **SmartScreen ("O Windows protegeu o seu computador"):**
-  1. Clique em **"Mais informações"**.
-  2. Selecione **"Executar assim mesmo"**.
-* **Arquivo retido pelo antivírus:**
-  Acesse *Segurança do Windows > Proteção contra vírus e ameaças > Histórico de proteção* e selecione *Ações > Permitir no dispositivo / Restaurar*.
-* **Recomendação técnica:**
-  Execute diretamente o script PowerShell no terminal da pasta para evitar gatilhos do interpretador de comandos em lote:
-  ```powershell
-  .\start.ps1
-  ```
+Ao iniciar pela primeira vez, o servidor cria automaticamente os arquivos necessários:
 
-### 2. Autenticação com a Conta Google no Antigravity CLI (`agy`)
-> [!WARNING]
-> O comando `agy auth login` **não existe** no CLI e resultará em erro de sintaxe (`unexpected argument "auth"`).
-
-* Para autenticar sua conta, execute no terminal da sua máquina:
-  ```bash
-  agy
-  ```
-  O utilitário abrirá uma sessão interativa e exibirá o link de autorização OAuth do Google no navegador.
-* Para verificar o status da autenticação e validar os modelos disponíveis:
-  ```bash
-  agy models
-  ```
-  A listagem de modelos confirma que o ambiente local está apto a receber instruções do aplicativo móvel.
-
-### 3. Bloqueio de Conexão Local por Firewall (Porta 4040)
-Caso o dispositivo móvel não consiga se comunicar com o computador através da rede Wi-Fi local:
-* **Windows (PowerShell com privilégios de Administrador):**
-  ```powershell
-  New-NetFirewallRule -DisplayName "Antigravity Server (Porta 4040)" -Direction Inbound -LocalPort 4040 -Protocol TCP -Action Allow
-  ```
-* **Linux (com firewall UFW ativo):**
-  ```bash
-  sudo ufw allow 4040/tcp
-  ```
-* **macOS:**
-  Acesse *Ajustes do Sistema > Rede > Firewall* e garanta que o processo `antigravity-server` está habilitado para conexões de entrada.
-
-### 4. Redes com Isolamento de Cliente (AP Isolation) e Conexões Remotas
-Em redes corporativas, acadêmicas ou públicas, o roteador pode impedir a comunicação ponto a ponto entre dispositivos na mesma rede local.
-* O servidor inicializa automaticamente um Quick Tunnel criptografado via Cloudflare com terminação `.trycloudflare.com`.
-* Utilize o código QR correspondente à URL pública para rotear o tráfego de forma transparente mesmo em redes móveis (4G/5G) ou redes com isolamento ativo.
+```text
+antigravity-server/
+├── bin/
+│   └── cloudflared           # Binário do Cloudflare Tunnel
+├── data/
+│   ├── antigravity.db        # Banco de dados local SQLite
+│   └── .machine_id           # Identificador anônimo para telemetria
+├── uploads/                  # Armazenamento de anexos e imagens
+├── .env                      # Variáveis de ambiente
+├── start.sh (ou start.ps1)   # Script de inicialização
+└── antigravity-server        # Executável compilado
+```
 
 ---
-
-<div align="center">
 
 Desenvolvido por WebuildSoft • Todos os direitos reservados © 2026
-
-</div>
