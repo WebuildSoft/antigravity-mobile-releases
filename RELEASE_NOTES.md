@@ -8,7 +8,7 @@ Antigravity Mobile & Server v1.4.0 (Build #40)
 # ==============================================================================
 ## Novidades da Versão v1.4.0 (Build #40)
 
-Ativar telemetria anônima padrão de mercado com opt-out e Safe-Download nativo
+Sincronização oficial de pacotes versionados ZIP e APK para Build 40
 
 ---
 
@@ -17,9 +17,12 @@ Ativar telemetria anônima padrão de mercado com opt-out e Safe-Download nativo
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
 | **Android** | `AntigravityMobile-v1.4.0-build40.apk` | 81M | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows.zip` | 13M | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | `antigravity-server-macos.zip` | 17M | Executar `./start.sh` |
-| **Linux** | `antigravity-server-linux.zip` | 13M | Executar `./start.sh` |
+| **Windows** | `antigravity-server-windows-v1.4.0-build40.zip` | 13M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | `antigravity-server-macos-v1.4.0-build40.zip` | 17M | Executar `./start.sh` |
+| **Linux** | `antigravity-server-linux-v1.4.0-build40.zip` | 12M | Executar `./start.sh` |
+
+> [!NOTE]
+> Os links fixos de download contínuo (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estas mesmas compilações oficiais.
 
 ---
 

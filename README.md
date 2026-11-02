@@ -23,9 +23,12 @@ Os binários compilados estão disponíveis diretamente na aba de [Releases](htt
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
 | **Android** | [`AntigravityMobile-v1.4.0-build40.apk`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/app-release.apk) | 81M | Instalar no dispositivo |
-| **Windows** | [`antigravity-server-windows.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-windows.zip) | 13M | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | [`antigravity-server-macos.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-macos.zip) | 17M | Executar `./start.sh` |
-| **Linux** | [`antigravity-server-linux.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-linux.zip) | 13M | Executar `./start.sh` |
+| **Windows** | [`antigravity-server-windows-v1.4.0-build40.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-windows.zip) | 13M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | [`antigravity-server-macos-v1.4.0-build40.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-macos.zip) | 17M | Executar `./start.sh` |
+| **Linux** | [`antigravity-server-linux-v1.4.0-build40.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-linux.zip) | 12M | Executar `./start.sh` |
+
+> [!NOTE]
+> Os links fixos (`app-release.apk`, `antigravity-server-windows.zip`, etc.) redirecionam sempre para a compilação estável do release atual.
 
 ---
 
