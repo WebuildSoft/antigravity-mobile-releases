@@ -9,8 +9,8 @@ Companion mobile client e servidor local de alta performance para o Google Antig
 [![Latest Release](https://img.shields.io/github/v/release/WebuildSoft/antigravity-mobile-releases?color=0284c7&style=flat-square)](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-334155?style=flat-square)](#download-dos-pacotes-v140--build-25)
 [![Go Server](https://img.shields.io/badge/server-Go%201.24-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/WebuildSoft/antigravity-server)
-[![Flutter](https://img.shields.io/badge/client-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)](https://github.com/WebuildSoft/Antigravity-mobile)
-[![License](https://img.shields.io/badge/license-MIT-emerald?style=flat-square)](LICENSE)
+[![Flutter](https://img.shields.io/badge/client-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)](https://github.com/WebuildSoft/antigravity-mobile-releases)
+[![Developer](https://img.shields.io/badge/developer-WebuildSoft-0284c7?style=flat-square)](https://github.com/WebuildSoft)
 
 </div>
 
@@ -140,6 +140,6 @@ Em redes corporativas, acadêmicas ou públicas, o roteador pode impedir a comun
 
 <div align="center">
 
-Desenvolvido por WebuildSoft • Licença MIT • 2026
+Desenvolvido por WebuildSoft • Todos os direitos reservados © 2026
 
 </div>
