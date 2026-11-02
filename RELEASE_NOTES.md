@@ -1,6 +1,6 @@
 ## Novidades da Versão v1.4.0 (Build #41)
 
-Lançamento oficial da Build 41: Reconhecimento contínuo de voz com ondas sonoras dinâmicas, editor de código com visualizador de diffs e realce de sintaxe colorido, gerenciamento de múltiplas contas Google simultâneas com cotas em tempo real, telemetria edge no Cloudflare Workers e novos instaladores minimalistas e resilientes.
+Lançamento oficial da Build 41: Suporte nativo a cores ANSI no console Windows, sincronização resiliente de executável e versão, reconhecimento contínuo de voz com ondas sonoras dinâmicas, editor de código com visualizador de diffs e realce de sintaxe colorido, suporte a múltiplas contas Google simultâneas com cotas em tempo real e telemetria edge no Cloudflare Workers.
 
 ---
 
@@ -43,7 +43,7 @@ Lançamento oficial da Build 41: Reconhecimento contínuo de voz com ondas sonor
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
 | **Android** | `AntigravityMobile-v1.4.0-build41.apk` | 81M | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows-v1.4.0-build41.zip` | 13M | Executar `.\start.ps1` ou `start.bat` |
+| **Windows** | `antigravity-server-windows-v1.4.0-build41.zip` | 21M | Executar `.\start.ps1` ou `start.bat` |
 | **macOS** | `antigravity-server-macos-v1.4.0-build41.zip` | 17M | Executar `./start.sh` |
 | **Linux** | `antigravity-server-linux-v1.4.0-build41.zip` | 13M | Executar `./start.sh` |
 
