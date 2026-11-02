@@ -1,10 +1,10 @@
-## Novidades da Versão v1.4.0 (Build #41)
+## Novidades da Versão v1.4.0 (Build #44)
 
-Lançamento oficial da Build 41: Suporte nativo a cores ANSI no console Windows, sincronização resiliente de executável e versão, reconhecimento contínuo de voz com ondas sonoras dinâmicas, editor de código com visualizador de diffs e realce de sintaxe colorido, suporte a múltiplas contas Google simultâneas com cotas em tempo real e telemetria edge no Cloudflare Workers.
+Isolamento multi-servidor: limpeza e recarregamento automático das conversas ao alternar entre Windows, Linux e Mac
 
 ---
 
-### Aplicativo Mobile (Android APK • Build #41)
+### Aplicativo Mobile (Android APK • Build #44)
 * **Gerenciamento Multi-Contas Google:**
   * Suporte nativo para conectar e alternar instantaneamente entre 3+ contas Google.
   * Atualização e exibição em tempo real de limites e cotas de requisições de IA para cada conta.
@@ -22,7 +22,7 @@ Lançamento oficial da Build 41: Suporte nativo a cores ANSI no console Windows,
 
 ---
 
-### Servidor Companion & Workspace (Build #41)
+### Servidor Companion & Workspace (Build #44)
 * **Telemetria de Inicialização na Nuvem (Edge Analytics):**
   * Despacho assíncrono de pings anônimos de inicialização diretamente para Cloudflare Worker (`https://telemetry.lnki.pro`).
   * Dashboard visual moderno (Dark Mode) protegido por login com contagem de servidores únicos, ativos 24h e geolocalização.
@@ -42,10 +42,10 @@ Lançamento oficial da Build 41: Suporte nativo a cores ANSI no console Windows,
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | `AntigravityMobile-v1.4.0-build41.apk` | 81M | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows-v1.4.0-build41.zip` | 21M | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | `antigravity-server-macos-v1.4.0-build41.zip` | 17M | Executar `./start.sh` |
-| **Linux** | `antigravity-server-linux-v1.4.0-build41.zip` | 13M | Executar `./start.sh` |
+| **Android** | `AntigravityMobile-v1.4.0-build44.apk` | 81M | Instalar no dispositivo |
+| **Windows** | `antigravity-server-windows-v1.4.0-build44.zip` | 22M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | `antigravity-server-macos-v1.4.0-build44.zip` | 17M | Executar `./start.sh` |
+| **Linux** | `antigravity-server-linux-v1.4.0-build44.zip` | 13M | Executar `./start.sh` |
 
 > [!NOTE]
 > Os links fixos de download contínuo (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estas mesmas compilações oficiais.
@@ -55,7 +55,7 @@ Lançamento oficial da Build 41: Suporte nativo a cores ANSI no console Windows,
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador oficial `AntigravityMobile-v1.4.0-build41.apk` (ou `app-release.apk`).
+1. Baixe o instalador oficial `AntigravityMobile-v1.4.0-build44.apk` (ou `app-release.apk`).
 2. Se o navegador exibir o aviso de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize a instalação.
 3. Conecte-se ao seu servidor apontando a câmera para o QR Code gerado no terminal.
 
