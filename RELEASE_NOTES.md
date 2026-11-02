@@ -1,18 +1,10 @@
-# ==============================================================================
-# CAMPO 1: RELEASE TITLE (Copie e cole no campo "Release title" do GitHub)
-# ==============================================================================
-Antigravity Mobile & Server v1.4.0 (Build #40) - Multi-Contas Google, Diffs Inteligentes e Telemetria Edge
+## Novidades da Versão v1.4.0 (Build #41)
 
-# ==============================================================================
-# CAMPO 2: DESCRIBE THIS RELEASE (Copie e cole no campo "Describe this release")
-# ==============================================================================
-## Novidades da Versão v1.4.0 (Build #40)
-
-Esta atualização traz suporte completo a **Multi-Contas Google**, motor avançado de **Diffs Inteligentes com realce de sintaxe colorido**, comando de voz com visualizador de ondas dinâmicas, telemetria anônima de inicialização via **Cloudflare Workers** com dashboard em tempo real protegido por login, e melhorias de estabilidade em todas as plataformas.
+Lançamento oficial da Build 41: Reconhecimento contínuo de voz com ondas sonoras dinâmicas, editor de código com visualizador de diffs e realce de sintaxe colorido, gerenciamento de múltiplas contas Google simultâneas com cotas em tempo real, telemetria edge no Cloudflare Workers e novos instaladores minimalistas e resilientes.
 
 ---
 
-### Aplicativo Mobile (Android APK • Build #40)
+### Aplicativo Mobile (Android APK • Build #41)
 * **Gerenciamento Multi-Contas Google:**
   * Suporte nativo para conectar e alternar instantaneamente entre 3+ contas Google.
   * Atualização e exibição em tempo real de limites e cotas de requisições de IA para cada conta.
@@ -30,7 +22,7 @@ Esta atualização traz suporte completo a **Multi-Contas Google**, motor avanç
 
 ---
 
-### Servidor Companion & Workspace (Build #40)
+### Servidor Companion & Workspace (Build #41)
 * **Telemetria de Inicialização na Nuvem (Edge Analytics):**
   * Despacho assíncrono de pings anônimos de inicialização diretamente para Cloudflare Worker (`https://telemetry.lnki.pro`).
   * Dashboard visual moderno (Dark Mode) protegido por login com contagem de servidores únicos, ativos 24h e geolocalização.
@@ -50,45 +42,34 @@ Esta atualização traz suporte completo a **Multi-Contas Google**, motor avanç
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | `AntigravityMobile-v1.4.0-build40.apk` | 77 MB | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows-v1.4.0-build40.zip` | 13 MB | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | `antigravity-server-macos-v1.4.0-build40.zip` | 17 MB | Executar `./start.sh` |
-| **Linux** | `antigravity-server-linux-v1.4.0-build40.zip` | 12 MB | Executar `./start.sh` |
+| **Android** | `AntigravityMobile-v1.4.0-build41.apk` | 81M | Instalar no dispositivo |
+| **Windows** | `antigravity-server-windows-v1.4.0-build41.zip` | 13M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | `antigravity-server-macos-v1.4.0-build41.zip` | 17M | Executar `./start.sh` |
+| **Linux** | `antigravity-server-linux-v1.4.0-build41.zip` | 13M | Executar `./start.sh` |
 
 > [!NOTE]
-> Os links fixos de redirecionamento (`app-release.apk`, `antigravity-server-windows.zip`, `antigravity-server-macos.zip`, `antigravity-server-linux.zip`) apontam diretamente para estas mesmas compilações estáveis oficiais.
+> Os links fixos de download contínuo (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estas mesmas compilações oficiais.
 
 ---
 
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador `AntigravityMobile-v1.4.0-build40.apk`.
-2. Se solicitado pelo sistema operacional, confirme **"Fazer download mesmo assim"** e habilite a permissão de instalação nas opções de segurança do navegador.
-3. Abra o aplicativo:
-   - Usuário existente: realize login com seu e-mail e senha.
-   - Novo usuário: toque em **"Criar Conta"** para cadastrar seu perfil de acesso.
+1. Baixe o instalador oficial `AntigravityMobile-v1.4.0-build41.apk` (ou `app-release.apk`).
+2. Se o navegador exibir o aviso de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize a instalação.
+3. Conecte-se ao seu servidor apontando a câmera para o QR Code gerado no terminal.
 
 ### 2. Servidor Companion (Computador)
 
 #### Windows (PowerShell)
-Execute o script de automação:
 ```powershell
 irm https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.ps1 | iex
 ```
-*Alternativa manual via arquivo ZIP:* Extraia `antigravity-server-windows-v1.4.0-build40.zip` e execute `.\start.ps1` (ou clique em `start.bat`).
 
 #### macOS e Linux (Terminal)
-Execute o script oficial:
 ```bash
 curl -sSL https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.sh | bash
 ```
-*Alternativa manual via arquivo ZIP:* Extraia `antigravity-server-macos-v1.4.0-build40.zip` e execute `./start.sh`.
-
-### 3. Pareamento
-1. O terminal exibirá um código QR com os endereços de conexão local e remoto.
-2. No aplicativo móvel, toque em **"Conectar Servidor"** e aponte a câmera para o terminal.
-3. O workspace e as conversas serão carregados automaticamente.
 
 ---
 
@@ -110,7 +91,6 @@ curl -sSL https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/
   ```bash
   agy
   ```
-  O Antigravity abrirá e fornecerá o link de autorização do Google no navegador.
 * Para validar a conectividade e os modelos de IA disponíveis:
   ```bash
   agy models
