@@ -1,31 +1,37 @@
 # ==============================================================================
 # CAMPO 1: RELEASE TITLE (Copie e cole no campo "Release title" do GitHub)
 # ==============================================================================
-Antigravity Mobile & Server v1.4.0 (Build #25) - Rolagem Inteligente no Chat e Suporte Universal de Workspace
+Antigravity Mobile & Server v1.4.0 (Build #26) - Correção de Mensagens Duplicadas e Atualização Direta via GitHub
 
 # ==============================================================================
 # CAMPO 2: DESCRIBE THIS RELEASE (Copie e cole no campo "Describe this release")
 # ==============================================================================
-## Novidades da Versão v1.4.0 (Build #25)
+## Novidades da Versão v1.4.0 (Build #26)
 
-Esta atualização traz melhorias críticas de usabilidade no **Chat do Aplicativo Mobile** e a **resolução universal de workspace** para servidores locais e remotos no **Linux**, **macOS** e **Windows**.
-
----
-
-### Aplicativo Mobile (Android APK • Build #25)
-* **Rolagem Inteligente (Smart Auto-Scroll):** A tela preserva a posição de leitura quando o usuário rola para cima para consultar mensagens anteriores durante a geração de respostas pela IA.
-* **Botão Flutuante de Retorno:** Exibição suave de botão de ação para retornar imediatamente à mensagem mais recente com um único toque.
-* **Rolagem Automática ao Enviar:** Deslocamento suave até o final da conversa sempre que uma nova mensagem for submetida.
-* **Estabilização de Renderização:** Otimização no fluxo de streaming de tokens em tempo real, eliminando oscilações visuais na lista de mensagens.
-* **Gerenciamento de Sessão:** Carregamento assíncrono das contas conectadas sem bloqueio da interface gráfica.
+Esta atualização traz correções essenciais de envio de mensagens no **Chat do Aplicativo Mobile**, sistema inteligente de verificação de atualizações diretas via **GitHub Releases** com fallback local, e melhorias de estabilidade em todas as plataformas.
 
 ---
 
-### Servidor Companion & Workspace (Build #25)
-* **Resolução Canônica de Diretório Home (`~`):** Implementação da função `ExpandHome` para tratar caminhos com til (`~`, `~/`, `~\`) de forma consistente entre plataformas.
-* **Normalização do Explorador de Projetos:** Correção do mapeamento da raiz do projeto para requisições do cliente móvel, eliminando erros de `stat .../~: no such file or directory`.
-* **Segurança e Isolamento de Diretórios:** Validação rigorosa contra Directory Traversal aplicada nos endpoints `/api/workspace/tree`, `/api/workspace/file` e no canal WebSocket.
-* **Binários Nativos Otimizados:** Compilação em Go puro (sem runtime CGO) com suporte Universal no macOS (Apple Silicon e Intel).
+### Aplicativo Mobile (Android APK • Build #26)
+* **Prevenção de Mensagens Duplicadas:**
+  * Implementação de proteção por debounce (bloqueio de toques múltiplos em sequência rápida).
+  * Desativação preventiva do campo de texto e botão de envio enquanto a solicitação estiver em transmissão.
+  * Deduplicação automática de mensagens por ID no gerenciador de estado, impedindo que a mesma mensagem apareça duas vezes na interface.
+* **Verificação de Atualização Direta via GitHub:**
+  * O aplicativo agora consulta diretamente o repositório público `WebuildSoft/antigravity-mobile-releases/version.json` para detectar novas versões em nuvem instantaneamente.
+* **Fallback Inteligente para Redes Fechadas / Intranets:**
+  * Caso o dispositivo esteja sem conexão com a internet externa ou operando em intranet corporativa, o app recorre automaticamente ao servidor companion local (`/api/version`) sem interromper a navegação.
+* **Rolagem Inteligente (Smart Auto-Scroll):** Preserva a posição de leitura ao consultar mensagens anteriores durante a geração de respostas pela IA com botão de retorno suave.
+* **Carregamento Otimizado de Contas:** Gerenciamento assíncrono e confiável de sessão e tokens de autenticação.
+
+---
+
+### Servidor Companion & Workspace (Build #26)
+* **Compatibilidade com Versões e Endpoints:** Endpoint `/api/version` integrado e sincronizado com o fluxo de atualização do cliente.
+* **Resolução Canônica de Diretório Home (`~`):** Função `ExpandHome` para tratar caminhos com til (`~`, `~/`, `~\`) de forma consistente no Linux, macOS e Windows.
+* **Normalização do Explorador de Projetos:** Correção do mapeamento da raiz do projeto para requisições do cliente móvel.
+* **Segurança e Isolamento de Diretórios:** Validação contra Directory Traversal aplicada nos endpoints `/api/workspace/tree`, `/api/workspace/file` e no canal WebSocket.
+* **Binários Nativos Otimizados:** Compilação em Go puro com suporte Universal no macOS (Apple Silicon e Intel).
 
 ---
 
@@ -33,20 +39,20 @@ Esta atualização traz melhorias críticas de usabilidade no **Chat do Aplicati
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | `AntigravityMobile-v1.4.0-build25.apk` | 73 MB | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows-v1.4.0-build25.zip` | 13 MB | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | `antigravity-server-macos-v1.4.0-build25.zip` | 17 MB | Executar `./start.sh` |
-| **Linux** | `antigravity-server-linux-v1.4.0-build25.zip` | 12 MB | Executar `./start.sh` |
+| **Android** | `AntigravityMobile-v1.4.0-build26.apk` | 70 MB | Instalar no dispositivo |
+| **Windows** | `antigravity-server-windows-v1.4.0-build26.zip` | 13 MB | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | `antigravity-server-macos-v1.4.0-build26.zip` | 17 MB | Executar `./start.sh` |
+| **Linux** | `antigravity-server-linux-v1.4.0-build26.zip` | 12 MB | Executar `./start.sh` |
 
 > [!NOTE]
-> Os links fixos de redirecionamento (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estes mesmos binários.
+> Os links fixos de redirecionamento (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estes mesmos binários compilados.
 
 ---
 
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador `AntigravityMobile-v1.4.0-build25.apk`.
+1. Baixe o instalador `AntigravityMobile-v1.4.0-build26.apk`.
 2. Se solicitado pelo sistema operacional, confirme **"Fazer download mesmo assim"** e habilite a permissão de instalação nas opções de segurança do navegador.
 3. Abra o aplicativo:
    - Usuário existente: realize login com seu e-mail e senha.
