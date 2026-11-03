@@ -1,10 +1,10 @@
-## Novidades da Versão v1.4.0 (Build #46)
+## Novidades da Versão v1.4.0 (Build #47)
 
-Release oficial com compilação completa do Flutter APK e servidores com sincronização nativa de Keyring
+Seletor dinâmico de modelos de IA no chat (Gemini 3.8 Flash, Claude Sonnet/Opus, GPT-OSS), acompanhamento de cotas em tempo real, healthcheck de termos TOS Google e proteção contra falhas de credenciais.
 
 ---
 
-### Aplicativo Mobile (Android APK • Build #46)
+### Aplicativo Mobile (Android APK • Build #47)
 * **Gerenciamento Multi-Contas Google:**
   * Suporte nativo para conectar e alternar instantaneamente entre 3+ contas Google.
   * Atualização e exibição em tempo real de limites e cotas de requisições de IA para cada conta.
@@ -22,7 +22,7 @@ Release oficial com compilação completa do Flutter APK e servidores com sincro
 
 ---
 
-### Servidor Companion & Workspace (Build #46)
+### Servidor Companion & Workspace (Build #47)
 * **Telemetria de Inicialização na Nuvem (Edge Analytics):**
   * Despacho assíncrono de pings anônimos de inicialização diretamente para Cloudflare Worker (`https://telemetry.lnki.pro`).
   * Dashboard visual moderno (Dark Mode) protegido por login com contagem de servidores únicos, ativos 24h e geolocalização.
@@ -42,10 +42,10 @@ Release oficial com compilação completa do Flutter APK e servidores com sincro
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | `AntigravityMobile-v1.4.0-build46.apk` | 81M | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows-v1.4.0-build46.zip` | 21M | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | `antigravity-server-macos-v1.4.0-build46.zip` | 17M | Executar `./start.sh` |
-| **Linux** | `antigravity-server-linux-v1.4.0-build46.zip` | 13M | Executar `./start.sh` |
+| **Android** | `AntigravityMobile-v1.4.0-build47.apk` | 81M | Instalar no dispositivo |
+| **Windows** | `antigravity-server-windows-v1.4.0-build47.zip` | 22M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | `antigravity-server-macos-v1.4.0-build47.zip` | 18M | Executar `./start.sh` |
+| **Linux** | `antigravity-server-linux-v1.4.0-build47.zip` | 13M | Executar `./start.sh` |
 
 > [!NOTE]
 > Os links fixos de download contínuo (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estas mesmas compilações oficiais.
@@ -55,7 +55,7 @@ Release oficial com compilação completa do Flutter APK e servidores com sincro
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador oficial `AntigravityMobile-v1.4.0-build46.apk` (ou `app-release.apk`).
+1. Baixe o instalador oficial `AntigravityMobile-v1.4.0-build47.apk` (ou `app-release.apk`).
 2. Se o navegador exibir o aviso de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize a instalação.
 3. Conecte-se ao seu servidor apontando a câmera para o QR Code gerado no terminal.
 
