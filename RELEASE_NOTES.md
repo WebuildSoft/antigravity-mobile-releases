@@ -1,40 +1,16 @@
-## Novidades da Versão v1.4.0 (Build #47)
+## Novidades da Versão v1.4.1 (Build #48)
 
-Seletor dinâmico de modelos de IA no chat (Gemini 3.8 Flash, Claude Sonnet/Opus, GPT-OSS), acompanhamento de cotas em tempo real, healthcheck de termos TOS Google e proteção contra falhas de credenciais.
-
----
-
-### Aplicativo Mobile (Android APK • Build #47)
-* **Gerenciamento Multi-Contas Google:**
-  * Suporte nativo para conectar e alternar instantaneamente entre 3+ contas Google.
-  * Atualização e exibição em tempo real de limites e cotas de requisições de IA para cada conta.
-  * Fluxo de autenticação assistida com captura e renovação de tokens OAuth.
-* **Diffs Inteligentes & Code Editor:**
-  * Reconstrução precisa da versão base para diffs na visualização de edições sugeridas pela IA.
-  * Realce de sintaxe colorido (Syntax Highlighting) com preservação de indentação e espaçamento.
-* **Comando de Voz & Áudio:**
-  * Reconhecimento contínuo de voz com visualizador de ondas dinâmicas integrado ao botão de envio.
-* **Prevenção de Mensagens Duplicadas:**
-  * Proteção por debounce (bloqueio de toques múltiplos em sequência rápida).
-  * Desativação preventiva do campo de texto e botão de envio enquanto a resposta da IA estiver sendo processada.
-  * Deduplicação automática de mensagens por ID no gerenciador de estado.
-* **Verificação de Atualização Direta:** Consulta em tempo real via GitHub Releases (`version.json`) com fallback inteligente local.
+Correção do seletor de modelos de IA no chat (toque imediato, bottom sheet com altura dinâmica, modelos pré-carregados e sincronização WebSocket)
 
 ---
 
-### Servidor Companion & Workspace (Build #47)
-* **Telemetria de Inicialização na Nuvem (Edge Analytics):**
-  * Despacho assíncrono de pings anônimos de inicialização diretamente para Cloudflare Worker (`https://telemetry.lnki.pro`).
-  * Dashboard visual moderno (Dark Mode) protegido por login com contagem de servidores únicos, ativos 24h e geolocalização.
-  * Ativação padrão de mercado (opt-out configurável via `.env` ou flag `--no-telemetry`).
-* **Instaladores Inteligentes:**
-  * Novo instalador do Windows (`install.ps1`) com função nativa `Safe-Download` em .NET (imune a falhas de aspas no curl).
-  * Visual renovado e minimalista no Windows e macOS/Linux (caixa ciano, checklist elegante `●`, zero emojis soltos).
-* **Sincronização de Conversas:**
-  * Mapeamento retroativo de sessões locais e preservação de histórico por usuário logado.
-  * Isolamento de diretórios contra Directory Traversal e normalização de caminhos com til (`~`).
-* **Binários Nativos Otimizados:**
-  * Compilação em Go puro com suporte Universal no macOS (Apple Silicon M1/M2/M3 e Intel x86_64), Linux (amd64/arm64) e Windows (amd64).
+### Aplicativo Mobile (Android APK • Build #48)
+* **Melhorias contínuas:** Otimizações de interface, estabilidade e sincronização de dados.
+
+---
+
+### Servidor Companion & Workspace (Build #48)
+* **Melhorias contínuas:** Otimizações de rede, túneis Cloudflare e estabilidade do daemon.
 
 ---
 
@@ -42,10 +18,10 @@ Seletor dinâmico de modelos de IA no chat (Gemini 3.8 Flash, Claude Sonnet/Opus
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | `AntigravityMobile-v1.4.0-build47.apk` | 81M | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows-v1.4.0-build47.zip` | 22M | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | `antigravity-server-macos-v1.4.0-build47.zip` | 18M | Executar `./start.sh` |
-| **Linux** | `antigravity-server-linux-v1.4.0-build47.zip` | 13M | Executar `./start.sh` |
+| **Android** | `AntigravityMobile-v1.4.1-build48.apk` | 81M | Instalar no dispositivo |
+| **Windows** | `antigravity-server-windows-v1.4.1-build48.zip` | 23M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | `antigravity-server-macos-v1.4.1-build48.zip` | 18M | Executar `./start.sh` |
+| **Linux** | `antigravity-server-linux-v1.4.1-build48.zip` | 13M | Executar `./start.sh` |
 
 > [!NOTE]
 > Os links fixos de download contínuo (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estas mesmas compilações oficiais.
@@ -55,7 +31,7 @@ Seletor dinâmico de modelos de IA no chat (Gemini 3.8 Flash, Claude Sonnet/Opus
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador oficial `AntigravityMobile-v1.4.0-build47.apk` (ou `app-release.apk`).
+1. Baixe o instalador oficial `AntigravityMobile-v1.4.1-build48.apk` (ou `app-release.apk`).
 2. Se o navegador exibir o aviso de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize a instalação.
 3. Conecte-se ao seu servidor apontando a câmera para o QR Code gerado no terminal.
 
