@@ -1,16 +1,18 @@
-## Novidades da Versão v1.4.1 (Build #48)
+## Novidades da Versão v1.4.1 (Build #49)
 
-Correção do seletor de modelos de IA no chat (toque imediato, bottom sheet com altura dinâmica, modelos pré-carregados e sincronização WebSocket)
-
----
-
-### Aplicativo Mobile (Android APK • Build #48)
-* **Melhorias contínuas:** Otimizações de interface, estabilidade e sincronização de dados.
+Ícones adaptativos com fundo transparente no Android e refinamento do seletor de modelos de IA no chat.
 
 ---
 
-### Servidor Companion & Workspace (Build #48)
-* **Melhorias contínuas:** Otimizações de rede, túneis Cloudflare e estabilidade do daemon.
+### Aplicativo Mobile (Android APK • Build #49)
+* **Ícones Adaptativos Nativos (Android):** Suporte completo ao padrão Adaptive Icons com fundo transparente e alta resolução, eliminando bordas brancas e garantindo presença marcante na tela inicial.
+* **Seletor de Modelos Dinâmico:** Correção na sensibilidade do toque do seletor de IA, abertura ágil em bottom sheet com altura ajustável e pré-carregamento dos modelos disponíveis.
+* **Sincronização em Tempo Real:** Atualização imediata do modelo ativo via WebSocket, eliminando atrasos ou inconsistências na troca de contexto do chat.
+
+---
+
+### Servidor Companion & Workspace (Build #49)
+* **Estabilidade & Conexão:** Otimizações contínuas de canais WebSocket e garantia de entrega imediata de mensagens de controle.
 
 ---
 
@@ -18,10 +20,10 @@ Correção do seletor de modelos de IA no chat (toque imediato, bottom sheet com
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | `AntigravityMobile-v1.4.1-build48.apk` | 81M | Instalar no dispositivo |
-| **Windows** | `antigravity-server-windows-v1.4.1-build48.zip` | 23M | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | `antigravity-server-macos-v1.4.1-build48.zip` | 18M | Executar `./start.sh` |
-| **Linux** | `antigravity-server-linux-v1.4.1-build48.zip` | 13M | Executar `./start.sh` |
+| **Android** | `AntigravityMobile-v1.4.1-build49.apk` | 81M | Instalar no dispositivo |
+| **Windows** | `antigravity-server-windows-v1.4.1-build49.zip` | 22M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | `antigravity-server-macos-v1.4.1-build49.zip` | 18M | Executar `./start.sh` |
+| **Linux** | `antigravity-server-linux-v1.4.1-build49.zip` | 13M | Executar `./start.sh` |
 
 > [!NOTE]
 > Os links fixos de download contínuo (`app-release.apk`, `antigravity-server-windows.zip`, etc.) apontam para estas mesmas compilações oficiais.
@@ -31,7 +33,7 @@ Correção do seletor de modelos de IA no chat (toque imediato, bottom sheet com
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador oficial `AntigravityMobile-v1.4.1-build48.apk` (ou `app-release.apk`).
+1. Baixe o instalador oficial `AntigravityMobile-v1.4.1-build49.apk` (ou `app-release.apk`).
 2. Se o navegador exibir o aviso de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize a instalação.
 3. Conecte-se ao seu servidor apontando a câmera para o QR Code gerado no terminal.
 
