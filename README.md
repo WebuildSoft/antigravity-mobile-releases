@@ -7,7 +7,7 @@
 Companion mobile client e servidor local de alta performance para o Google Antigravity.
 
 [![Latest Release](https://img.shields.io/github/v/release/WebuildSoft/antigravity-mobile-releases?color=0284c7&style=flat-square)](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest)
-[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-334155?style=flat-square)](#download-dos-pacotes-v14.0--build-45)
+[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-334155?style=flat-square)](#download-dos-pacotes-v14.0--build-46)
 [![Go Server](https://img.shields.io/badge/server-Go%201.24-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/WebuildSoft/antigravity-server)
 [![Flutter](https://img.shields.io/badge/client-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)](https://github.com/WebuildSoft/antigravity-mobile-releases)
 [![Developer](https://img.shields.io/badge/developer-WebuildSoft-0284c7?style=flat-square)](https://github.com/WebuildSoft)
@@ -16,16 +16,16 @@ Companion mobile client e servidor local de alta performance para o Google Antig
 
 ---
 
-## Download dos Pacotes (v1.4.0 • Build #45)
+## Download dos Pacotes (v1.4.0 • Build #46)
 
 Os binários compilados estão disponíveis diretamente na aba de [Releases](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest):
 
 | Plataforma | Pacote Versionado | Tamanho | Inicialização |
 | :--- | :--- | :---: | :--- |
-| **Android** | [`AntigravityMobile-v1.4.0-build45.apk`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/app-release.apk) | 81M | Instalar no dispositivo |
-| **Windows** | [`antigravity-server-windows-v1.4.0-build45.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-windows.zip) | 22M | Executar `.\start.ps1` ou `start.bat` |
-| **macOS** | [`antigravity-server-macos-v1.4.0-build45.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-macos.zip) | 17M | Executar `./start.sh` |
-| **Linux** | [`antigravity-server-linux-v1.4.0-build45.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-linux.zip) | 13M | Executar `./start.sh` |
+| **Android** | [`AntigravityMobile-v1.4.0-build46.apk`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/app-release.apk) | 81M | Instalar no dispositivo |
+| **Windows** | [`antigravity-server-windows-v1.4.0-build46.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-windows.zip) | 21M | Executar `.\start.ps1` ou `start.bat` |
+| **macOS** | [`antigravity-server-macos-v1.4.0-build46.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-macos.zip) | 17M | Executar `./start.sh` |
+| **Linux** | [`antigravity-server-linux-v1.4.0-build46.zip`](https://github.com/WebuildSoft/antigravity-mobile-releases/releases/latest/download/antigravity-server-linux.zip) | 13M | Executar `./start.sh` |
 
 > [!NOTE]
 > Os links fixos (`app-release.apk`, `antigravity-server-windows.zip`, etc.) redirecionam sempre para a compilação estável do release atual.
@@ -47,7 +47,7 @@ O ecossistema divide-se em dois módulos complementares:
 ## Guia de Instalação e Execução
 
 ### 1. Dispositivo Móvel (Android)
-1. Baixe o instalador `AntigravityMobile-v1.4.0-build45.apk` (ou `app-release.apk`).
+1. Baixe o instalador `AntigravityMobile-v1.4.0-build46.apk` (ou `app-release.apk`).
 2. Se o navegador exibir o aviso de instalação de fontes desconhecidas, selecione **"Fazer download mesmo assim"** e autorize o navegador nas opções de segurança do sistema.
 3. Abra o aplicativo instalado:
    - Caso já possua conta: faça login com seu e-mail e senha.
@@ -61,7 +61,7 @@ Execute o script de automação via PowerShell:
 irm https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.ps1 | iex
 ```
 *Alternativa manual via arquivo ZIP:*
-1. Extraia o pacote `antigravity-server-windows-v1.4.0-build45.zip`.
+1. Extraia o pacote `antigravity-server-windows-v1.4.0-build46.zip`.
 2. Abra a pasta no PowerShell e inicie o servidor:
    ```powershell
    .\start.ps1
@@ -74,7 +74,7 @@ Execute o script oficial via Terminal:
 curl -sSL https://raw.githubusercontent.com/WebuildSoft/antigravity-server/main/install.sh | bash
 ```
 *Alternativa manual via arquivo ZIP:*
-1. Extraia o pacote `antigravity-server-macos-v1.4.0-build45.zip` (ou `linux`).
+1. Extraia o pacote `antigravity-server-macos-v1.4.0-build46.zip` (ou `linux`).
 2. Abra a pasta no Terminal e inicie o servidor:
    ```bash
    ./start.sh
